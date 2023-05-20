@@ -13,6 +13,14 @@
     font-family: var(--fonte);
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    scroll-behavior: smooth;
+}
+
 header{
     width: 100%;
     height: 100vh;
@@ -26,7 +34,7 @@ div#escurecer {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
 }
@@ -40,13 +48,34 @@ div#escurecer > h1 {
     font-weight: 300;
 }
 
+div#escurecer > h1 {
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0);
+}
+
+div#escurecer > img#logo {
+    width: 55vw;
+}
+
+div#escurecer > a > img#scroll {
+    width: 10vw;
+    border-radius: 100%;
+    margin: 5px;
+    transition: 0.2s;
+}
+
+div#escurecer > a > img#scroll:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.096);
+}
+
 section {
     width: 100%;
 }
 
 section.seccomum {
    background-color: whitesmoke;
-   height: 400px;
+   min-height: auto;
 }
 
 section.secimg {
@@ -54,4 +83,70 @@ section.secimg {
     background-image: url(img/fundoplanta2.jpg);
     background-position: bottom center;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.secimg > div {
+    max-width: 800px;
+}
+
+section.secimg > div > p {
+    color: whitesmoke;
+    font-family: var(--fonteT);
+    font-size: 2.2em;
+    margin: 20px;
+    text-align: center;
+}
+
+div.content {
+    height: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+div.content > div {
+    margin: 20px;
+}
+
+div.content > div.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+    text-align: center;
+}
+
+div.text > p {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+spam {
+    color: #699b28;
+}
+
+.content, .center {
+    visibility: hidden;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(14, 14, 14);
+}
+
+footer > p {
+    font-size: 1.3em;
+    color: whitesmoke;
+    padding: 30px;
 }
